@@ -1,6 +1,6 @@
 async function getApi() {
 
-    const response = await fetch('https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/West%20Lafayette?unitGroup=metric&key=N8F2BH4BRLZDNV2HPZPBQ2XWV&contentType=json')
+    const response = await fetch('https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/New%20York?unitGroup=metric&key=N8F2BH4BRLZDNV2HPZPBQ2XWV&contentType=json')
 
     const obj = await response.json()
 

@@ -19,7 +19,7 @@ var weather = document.getElementById("weatherList");
  for (var i=0;i<x.days.length;i++) {
     console.log("DATE: " + x.days[i].datetime + " || CONDITIONS: " + x.days[i].conditions + " || TEMP: " + x.days[i].temp);
     var data = document.createElement("p");
-    data.innerHTML = "DATE: " + x.days[i].datetime + " || CONDITIONS: " + x.days[i].conditions + " || TEMP: " + x.days[i].temp + "C || " + x.days[i].description;
+    data.innerHTML = "DATE: " + x.days[i].datetime + " || CONDITIONS: " + x.days[i].conditions + " || MIN TEMP: " + x.days[i].tempmin + "C || MAX TEMP: "+ x.days[i].tempmax + "C || TEMP: " + x.days[i].temp + "C || " + x.days[i].description;
     weather.appendChild(data);
  }
 //  var list = document.getElementById("list-group");

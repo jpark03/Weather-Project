@@ -19,7 +19,7 @@ var weather = document.getElementById("weatherList");
  for (var i=0;i<x.days.length;i++) {
     console.log("DATE: " + x.days[i].datetime + " || CONDITIONS: " + x.days[i].conditions + " || TEMP: " + x.days[i].temp);
     var data = document.createElement("p");
-    data.innerHTML = "DATE: " + x.days[i].datetime + " || CONDITIONS: " + x.days[i].conditions + " || TEMP: " + x.days[i].temp + "C || " + x.days[i].description;
+    data.innerHTML = "DATE: " + x.days[i].datetime + " || CONDITIONS: " + x.days[i].conditions + " || MIN TEMP: " + x.days[i].tempmin + "C || MAX TEMP: "+ x.days[i].tempmax + "C || TEMP: " + x.days[i].temp + "C || " + x.days[i].description;
     weather.appendChild(data);
  }
 //  var list = document.getElementById("list-group");
@@ -32,6 +32,8 @@ if (x.days[0].conditions == "Partially cloudy") {
     document.querySelector('body').style.backgroundImage="url(images/Overcast.jpeg)";
  } else if (x.days[0].conditions == "Rain, Partially cloudy") {
     document.querySelector('body').style.backgroundImage="url(images/RainCloud.jpeg)";
+ } else if (x.days[0].conditions == "Rain, Overcast") {
+    document.querySelector('body').style.backgroundImage="url(images/RainyDay.jpg)";
  } else {
     document.querySelector('body').style.backgroundImage="url(images/Clear.jpg)";
  }
