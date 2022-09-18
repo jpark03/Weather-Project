@@ -1,6 +1,6 @@
 async function getApi() {
 
-    const response = await fetch('https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/West%20Lafayette?unitGroup=metric&key=N8F2BH4BRLZDNV2HPZPBQ2XWV&contentType=json')
+    const response = await fetch('https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/Thunder%20Bay?unitGroup=metric&key=N8F2BH4BRLZDNV2HPZPBQ2XWV&contentType=json')
 
     const obj = await response.json()
 
@@ -32,6 +32,8 @@ if (x.days[0].conditions == "Partially cloudy") {
     document.querySelector('body').style.backgroundImage="url(images/Overcast.jpeg)";
  } else if (x.days[0].conditions == "Rain, Partially cloudy") {
     document.querySelector('body').style.backgroundImage="url(images/RainCloud.jpeg)";
+ } else if (x.days[0].conditions == "Rain, Overcast") {
+    document.querySelector('body').style.backgroundImage="url(images/RainyDay.jpg)";
  } else {
     document.querySelector('body').style.backgroundImage="url(images/Clear.jpg)";
  }
