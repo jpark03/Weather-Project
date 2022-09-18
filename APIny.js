@@ -34,7 +34,9 @@ if (x.days[0].conditions == "Partially cloudy") {
     document.querySelector('body').style.backgroundImage="url(images/RainCloud.jpeg)";
  } else if (x.days[0].conditions == "Rain, Overcast") {
     document.querySelector('body').style.backgroundImage="url(images/RainyDay.jpg)";
- } else {
+ } else if (x.days[0].conditions == "Clear"){
     document.querySelector('body').style.backgroundImage="url(images/Clear.jpg)";
+ } else {
+    document.querySelector('body').style.backgroundImage="url(images/Thunder.jpeg)";
  }
 })()
